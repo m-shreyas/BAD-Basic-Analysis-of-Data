@@ -380,11 +380,11 @@ function Dashboard() {
         </div>
       </nav>
 
-      <div className="relative max-w-7xl mx-auto px-6 py-8">
+<div className="relative max-w-7xl mx-auto px-6 py-8 overflow-x-hidden">
         <div className="grid grid-cols-1 xl:grid-cols-[260px_1fr] gap-4">
 
           {/* Sidebar */}
-          <div className="space-y-4">
+          <div className="space-y-4 min-w-0">
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5">
               <h2 className="text-white font-semibold text-sm mb-1">Upload Dataset</h2>
               <p className="text-zinc-500 text-xs mb-4">CSV or XLSX · Max 10MB</p>
