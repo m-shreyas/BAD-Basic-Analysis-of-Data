@@ -381,7 +381,7 @@ function Dashboard() {
       </nav>
 
       <div className="relative max-w-7xl mx-auto px-6 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6">
+        <div className="grid grid-cols-1 xl:grid-cols-[260px_1fr] gap-4">
 
           {/* Sidebar */}
           <div className="space-y-4">
@@ -460,7 +460,7 @@ function Dashboard() {
               </div>
             ) : (
               <>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                   {[
                     { label: "Rows", value: result.rows?.toLocaleString(), icon: "📋" },
                     { label: "Columns", value: result.cols, icon: "📐" },
