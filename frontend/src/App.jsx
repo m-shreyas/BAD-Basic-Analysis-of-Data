@@ -227,7 +227,7 @@ function ColumnTable({ columns = [] }) {
         <input className="bg-zinc-800 border border-zinc-700 text-white text-sm px-3 py-1.5 rounded-lg placeholder-zinc-600 focus:outline-none focus:border-indigo-500"
           placeholder="Filter columns…" value={search} onChange={e => setSearch(e.target.value)} />
       </div>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto max-w-full">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-zinc-800">
@@ -360,7 +360,7 @@ function Dashboard() {
   const numericCols = columns.filter(c => c.kind === "numeric");
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white">
+    <div className="min-h-screen bg-[#0a0a0f] text-white overflow-x-hidden">
       <div className="fixed inset-0 opacity-[0.025]" style={{
         backgroundImage: "linear-gradient(#6366f1 1px, transparent 1px), linear-gradient(90deg, #6366f1 1px, transparent 1px)",
         backgroundSize: "60px 60px"
