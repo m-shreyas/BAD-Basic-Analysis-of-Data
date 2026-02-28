@@ -7,17 +7,17 @@ def load_and_clean(path: Path):
 
     # Load
     if name.endswith(".csv"):
-    try:
-        df = pd.read_csv(path, encoding='utf-8')
-    except UnicodeDecodeError:
         try:
-            df = pd.read_csv(path, encoding='latin-1')
+            df = pd.read_csv(path, encoding='utf-8')
         except UnicodeDecodeError:
-            df = pd.read_csv(path, encoding='cp1252')
-elif name.endswith(".xlsx"):
-    df = pd.read_excel(path)
-else:
-    raise ValueError("Unsupported file type. Upload .csv or .xlsx")
+            try:
+                df = pd.read_csv(path, encoding='latin-1')
+            except UnicodeDecodeError:
+                df = pd.read_csv(path, encoding='cp1252')
+    elif name.endswith(".xlsx"):
+        df = pd.read_excel(path)
+    else:
+        raise ValueError("Unsupported file type. Upload .csv or .xlsx")
 
     # Clean basics
     df = df.copy()
