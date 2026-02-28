@@ -263,8 +263,8 @@ function PreviewTable({ preview }) {
     <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5">
       <h3 className="text-white font-semibold text-sm mb-1">Data Preview</h3>
       <p className="text-zinc-500 text-xs mb-4">First 10 rows of cleaned data</p>
-      <div className="overflow-x-auto">
-        <table className="w-full text-xs">
+      <div style={{ maxWidth: 'calc(100vw - 380px)', overflowX: 'auto' }}>
+        <table className="text-xs" style={{ minWidth: 'max-content' }}>
           <thead>
             <tr className="border-b border-zinc-800">
               {cols.map(c => <th key={c} className="text-left text-zinc-500 font-medium py-2 px-3 whitespace-nowrap">{c}</th>)}
