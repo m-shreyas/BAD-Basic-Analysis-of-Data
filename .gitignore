@@ -1,0 +1,22 @@
+# Environment files
+.env
+backend/.env
+frontend/.env
+
+# Database
+bad.db
+
+# Generated data files
+data/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+
+# Mac files
+.DS_Store

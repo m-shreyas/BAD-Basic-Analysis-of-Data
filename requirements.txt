@@ -1,7 +1,20 @@
 fastapi
-uvicorn
+uvicorn[standard]
 pandas
 numpy
 openpyxl
 reportlab
 python-multipart
+
+# Auth
+python-jose[cryptography]
+passlib[bcrypt]
+
+# Database (SQLite for dev, PostgreSQL for prod)
+sqlalchemy
+
+# PostgreSQL driver — uncomment for prod
+# psycopg2-binary
+
+# Pydantic email validation
+pydantic[email]
