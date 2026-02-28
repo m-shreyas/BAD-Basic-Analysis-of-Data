@@ -5,16 +5,14 @@ numpy
 openpyxl
 reportlab
 python-multipart
+matplotlib
 
 # Auth
 python-jose[cryptography]
 passlib[bcrypt]
 
-# Database (SQLite for dev, PostgreSQL for prod)
+# Database
 sqlalchemy
-
-# PostgreSQL driver — uncomment for prod
-# psycopg2-binary
 
 # Pydantic email validation
 pydantic[email]
